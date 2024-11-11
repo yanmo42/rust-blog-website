@@ -1,0 +1,11 @@
+/* static/style.css */
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+h1, h3 {
+    color: #007bff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,38 @@
+<!-- templates/index.html -->
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>{{ title }}</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container">
+    <h1 class="mt-4">{{ title }}</h1>
+    <p>Welcome to {{ title }}! Here's a list of posts:</p>
+    
+    <!-- Post List -->
+    <ul class="list-group mb-4">
+        {% for post in posts %}
+            <li class="list-group-item">
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.content }}</p>
+                <button class="btn btn-primary">Read More</button>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Load More Button -->
+    <button id="load-more" class="btn btn-success">Load More</button>
+
+    <!-- jQuery and Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript for Load More Button -->
+    <script>
+        document.getElementById("load-more").addEventListener("click", function() {
+            // Use AJAX or Fetch API to load additional posts
+            alert("Load more posts coming soon!"); // Placeholder
+        });
+    </script>
+</body>
+</html>
